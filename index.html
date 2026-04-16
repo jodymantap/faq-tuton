@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>FAQ</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+    background: radial-gradient(circle at top, #f8fafc, #e2e8f0);
+}
+
+/* Smooth accordion real animation */
+.faq-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Icon rotate */
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .icon {
+    transform: rotate(180deg);
+}
+
+/* subtle entrance */
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body class="min-h-screen text-gray-800">
+
+<div class="max-w-4xl mx-auto px-4 py-10">
+
+<h1 class="text-3xl md:text-4xl font-bold mb-10 tracking-tight">
+    Frequently Asked Questions
+</h1>
+
+<div id="faqContainer" class="space-y-3"></div>
+
+</div>
+
+<!-- Modal -->
+<div id="modal"
+class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 backdrop-blur-sm">
+
+<img id="modalImg"
+class="max-w-[92%] max-h-[92%] rounded-xl shadow-2xl transition-all duration-300 scale-95"/>
+
+</div>
+
+<script>
+async function loadFAQ() {
+    const res = await fetch('faq.json');
+    const data = await res.json();
+
+    const container = document.getElementById('faqContainer');
+
+    data.forEach(item => {
+        const el = document.createElement('div');
+
+        el.className = "faq-item fade-in";
+
+        el.innerHTML = `
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200
+                    hover:shadow-lg transition-all duration-300">
+
+            <button onclick="toggleFAQ(this)"
+                class="w-full flex justify-between items-center p-5 text-left">
+
+                <span class="font-medium text-base md:text-lg">
+                    ${item.question}
+                </span>
+
+                <svg class="icon w-5 h-5 text-gray-500"
+                    fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+
+            <div class="faq-content px-5">
+
+                <div class="pb-5 pt-1 border-t border-gray-100">
+
+                    <p class="text-gray-600 mb-4 leading-relaxed text-sm md:text-base">
+                        ${item.answer}
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        ${item.images.map(img => `
+                            <img src="${img}"
+                            class="rounded-xl cursor-pointer object-cover h-28 sm:h-32 md:h-36 w-full
+                                   hover:scale-[1.03] hover:shadow-md transition duration-300"
+                            onclick="openModal('${img}')"
+                            />
+                        `).join('')}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        `;
+
+        container.appendChild(el);
+    });
+}
+
+function toggleFAQ(button) {
+    const item = button.closest('.faq-item');
+    const content = item.querySelector('.faq-content');
+
+    const isOpen = item.classList.contains('active');
+
+    // close all first (single open mode)
+    document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        const c = i.querySelector('.faq-content');
+        c.style.height = "0px";
+    });
+
+    if (!isOpen) {
+        item.classList.add('active');
+
+        // calculate real height
+        content.style.height = content.scrollHeight + "px";
+    }
+}
+
+function openModal(src) {
+    const modal = document.getElementById('modal');
+    const img = document.getElementById('modalImg');
+
+    img.src = src;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+
+    setTimeout(() => {
+        img.classList.remove('scale-95');
+        img.classList.add('scale-100');
+    }, 10);
+}
+
+document.getElementById('modal').onclick = function () {
+    const img = document.getElementById('modalImg');
+    img.classList.add('scale-95');
+
+    setTimeout(() => {
+        this.classList.add('hidden');
+    }, 150);
+};
+
+loadFAQ();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Latihan soal tidak dapat ditampilkan pada e-learning, kenapa dan harus bagaimana?",
+        "answer": "Latihan soal yang tidak tampil atau muncul error pada suatu section di e-learning bisa disebabkan oleh beberapa hal. Salah satunya adalah materi pada section tersebut memang belum diunggah oleh dosen. Section tersebut tidak berpengaruh terhadap penilaian tutorial online, sehingga kamu bisa langsung melewatinya dengan memilih \"tandai selesai\".",
+        "images": [
+            "images/image1.jpeg",
+            "images/image2.jpeg"
+        ]
+    },
+    {
+        "question": "Jika sudah mengerjakan sesi 1 dari total 8 sesi, berapa persen progress yang seharusnya muncul?",
+        "answer": "Tidak perlu terlalu berfokus pada progress bar, karena persentasenya tidak selalu mencerminkan detail penilaian secara akurat. Sebaiknya cek langsung pada tab \"Grades\" untuk melihat rincian penilaian, dan pastikan setiap section yang wajib sudah dikerjakan dengan benar.",
+        "images": [
+            "images/image3.jpeg",
+            "images/image4.jpeg"
+        ]
+    },
+    {
+        "question": "Kenapa pada sebuah mata kuliah tidak terdapat section kehadiran dan diskusi?",
+        "answer": "Periksa kembali jenis mata kuliah tersebut. Jika termasuk mata kuliah berpraktik, biasanya memang tidak terdapat section kehadiran maupun diskusi. Sebagai gantinya, akan ada tugas yang diberikan pada sesi tertentu, seperti sesi 3, 5, dan 7 dalam tutorial online.",
+        "images": ["images/image5.jpeg"]
+    },
+    {
+        "question": "Nilai diskusi yang diberikan dosen masih kecil, apakah bisa diperbaiki?",
+        "answer": "Bisa. Kamu dapat menambahkan jawaban baru pada section diskusi tersebut sebagai bentuk revisi. Disarankan untuk menuliskan keterangan \"REVISI\" di bagian awal jawaban agar mudah dikenali. Biasanya dosen akan meninjau ulang dan mempertimbangkan nilai terbaik dari kontribusi yang telah diberikan.",
+        "images": []
+    },
+    {
+        "question": "Sudah beberapa hari setelah mengirim jawaban pada section diskusi, tapi nilainya belum juga diberikan. Apakah normal?",
+        "answer": "Hal ini cukup umum terjadi dan tidak perlu terlalu dicemaskan. Penilaian diskusi tidak selalu dilakukan oleh satu dosen tetap saja, tetapi bisa juga melibatkan pengajar lain dari institusi berbeda atau dosen yang menangani lebih dari satu kelas. Karena itu, keterlambatan dalam pemberian nilai adalah hal yang wajar, bahkan terkadang hingga masuk ke sesi berikutnya. Yang terpenting, tetap berikan jawaban terbaik pada setiap sesi yang dikerjakan.",
+        "images": []
+    },
+    {
+        "question": "Sudah menyelesaikan sebuah sesi tutorial online, kenapa sesi selanjutnya belum terbuka?",
+        "answer": "Hal ini normal terjadi. Tutorial online (tuton) memiliki jadwal yang sudah ditentukan, biasanya sekitar satu sesi per minggu. Setiap sesi akan terbuka sesuai jadwalnya dan juga akan ditutup dalam periode tertentu. Jadi meskipun sesi sebelumnya sudah selesai, kamu tetap perlu menunggu hingga jadwal sesi berikutnya dibuka.",
+        "images": ["images/image6.jpeg"]
+    }
+]

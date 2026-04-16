@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <div class="max-w-2xl mx-auto py-12 px-4">
+
+        <h1 class="text-3xl font-bold mb-6">Add FAQ</h1>
+
+        <form id="form" class="space-y-4 bg-white p-6 rounded-xl shadow">
+
+            <input id="question" placeholder="Question" class="w-full border p-3 rounded-lg" />
+
+            <textarea id="answer" placeholder="Answer" class="w-full border p-3 rounded-lg"></textarea>
+
+            <input type="file" id="images" multiple class="w-full" />
+
+            <button class="bg-black text-white px-4 py-2 rounded-lg w-full">
+                Generate JSON
+            </button>
+
+        </form>
+
+        <div class="mt-6 space-y-3">
+
+            <button onclick="copyJSON()" class="bg-blue-600 text-white px-4 py-2 rounded w-full">
+                Copy JSON
+            </button>
+
+            <button onclick="downloadJSON()" class="bg-green-600 text-white px-4 py-2 rounded w-full">
+                Download JSON
+            </button>
+
+        </div>
+
+        <pre id="output" class="mt-6 bg-black text-green-400 p-4 rounded text-sm overflow-auto"></pre>
+
+    </div>
+
+    <script>
+        let generatedData = null;
+
+        document.getElementById('form').onsubmit = function (e) {
+            e.preventDefault();
+
+            const question = document.getElementById('question').value;
+            const answer = document.getElementById('answer').value;
+            const files = document.getElementById('images').files;
+
+            const images = [];
+
+            for (let f of files) {
+                images.push("images/" + f.name);
+            }
+
+            generatedData = {
+                question,
+                answer,
+                images
+            };
+
+            document.getElementById('output').textContent =
+                JSON.stringify(generatedData, null, 2);
+        };
+
+        function copyJSON() {
+            navigator.clipboard.writeText(
+                JSON.stringify(generatedData, null, 2)
+            );
+            alert("Copied!");
+        }
+
+        function downloadJSON() {
+            const blob = new Blob(
+                [JSON.stringify(generatedData, null, 2)],
+                { type: "application/json" }
+            );
+
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = "new-faq.json";
+            a.click();
+        }
+    </script>
+
+</body>
+
+</html>
