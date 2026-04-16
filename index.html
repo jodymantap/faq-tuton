@@ -164,7 +164,9 @@
             }, 10);
         }
 
-        document.getElementById('modal').onclick = function () {
+        document.getElementById('modal').onclick = function (e) {
+            if (e.target.id !== 'modal') return; // ⬅️ penting
+
             const img = document.getElementById('modalImg');
             img.classList.add('scale-95');
 
@@ -178,16 +180,18 @@
         /* ================= ZOOM IMAGE (MODAL ONLY) ================= */
 
         let scale = 1;
+        let baseScale = 1;
         let posX = 0;
         let posY = 0;
         let startX = 0;
         let startY = 0;
         let isDragging = false;
-        let lastTap = 0;
         let startDist = 0;
+        let tapTimeout = null;
 
         const modalImg = document.getElementById('modalImg');
 
+        /* ---------- TRANSFORM ---------- */
         function updateTransform(originX = null, originY = null) {
             if (originX !== null && originY !== null) {
                 modalImg.style.transformOrigin = `${originX}px ${originY}px`;
@@ -195,7 +199,11 @@
             modalImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
         }
 
-        /* ---------- PINCH ZOOM ---------- */
+        /* ---------- STOP BUBBLE (PENTING) ---------- */
+        modalImg.addEventListener('click', (e) => e.stopPropagation());
+        modalImg.addEventListener('touchend', (e) => e.stopPropagation());
+
+        /* ---------- PINCH ZOOM (SMOOTH) ---------- */
         function getDistance(touches) {
             return Math.hypot(
                 touches[0].clientX - touches[1].clientX,
@@ -206,6 +214,7 @@
         modalImg.addEventListener('touchstart', (e) => {
             if (e.touches.length === 2) {
                 startDist = getDistance(e.touches);
+                baseScale = scale; // anchor scale biar ga geter
             }
         }, { passive: false });
 
@@ -216,21 +225,25 @@
                 const newDist = getDistance(e.touches);
                 const zoomFactor = newDist / startDist;
 
+                scale = Math.min(Math.max(1, baseScale * zoomFactor), 4);
+
                 const rect = modalImg.getBoundingClientRect();
                 const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2 - rect.left;
                 const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2 - rect.top;
-
-                scale = Math.min(Math.max(1, scale * zoomFactor), 4);
-                startDist = newDist;
 
                 updateTransform(centerX, centerY);
             }
         }, { passive: false });
 
-        /* ---------- DOUBLE TAP (MOBILE) ---------- */
+        /* ---------- DOUBLE TAP (FIXED) ---------- */
         modalImg.addEventListener('touchend', (e) => {
-            const now = Date.now();
-            if (now - lastTap < 300) {
+            if (e.touches.length > 0) return;
+
+            if (tapTimeout) {
+                clearTimeout(tapTimeout);
+                tapTimeout = null;
+
+                // toggle zoom
                 scale = scale > 1 ? 1 : 2;
 
                 const rect = modalImg.getBoundingClientRect();
@@ -243,8 +256,11 @@
                 posY = 0;
 
                 updateTransform(x, y);
+            } else {
+                tapTimeout = setTimeout(() => {
+                    tapTimeout = null;
+                }, 250);
             }
-            lastTap = now;
         });
 
         /* ---------- DOUBLE CLICK (DESKTOP) ---------- */
@@ -261,7 +277,7 @@
             updateTransform(x, y);
         });
 
-        /* ---------- DRAG WHEN ZOOMED ---------- */
+        /* ---------- DRAG (DESKTOP) ---------- */
         modalImg.addEventListener('mousedown', (e) => {
             if (scale > 1) {
                 isDragging = true;
@@ -289,8 +305,10 @@
             originalOpenModal(src);
 
             scale = 1;
+            baseScale = 1;
             posX = 0;
             posY = 0;
+
             modalImg.style.transformOrigin = "center center";
             modalImg.style.transform = "translate(0px, 0px) scale(1)";
         };
