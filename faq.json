@@ -17,7 +17,7 @@
     },
     {
         "question": "Kenapa pada sebuah mata kuliah tidak terdapat section kehadiran dan diskusi?",
-        "answer": "<div class='space-y-3'>\n<p>Periksa kembali jenis mata kuliah tersebut.</p>\n\n<div class='bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm'>\n📌 Jika termasuk mata kuliah praktik, biasanya memang tidak terdapat section kehadiran maupun diskusi.\n</div>\n\n<p>Sebagai gantinya, akan ada tugas yang diberikan pada sesi tertentu, seperti <b>sesi 3, 5, dan 7</b> dalam tutorial online.</p>\n</div>",
+        "answer": "<div class='space-y-3'>\n<p>Periksa kembali jenis mata kuliah tersebut.</p>\n\n<div class='bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm'>\n📌 Jika termasuk mata kuliah berpraktik, biasanya memang tidak terdapat section kehadiran maupun diskusi.\n</div>\n\n<p>Sebagai gantinya, akan ada tugas yang diberikan pada sesi tertentu, seperti <b>sesi 3, 5, dan 7</b> dalam tutorial online.</p>\n</div>",
         "images": [
             "images/image5.jpeg"
         ]
@@ -29,7 +29,7 @@
     },
     {
         "question": "Sudah beberapa hari setelah mengirim jawaban pada section diskusi, tapi nilainya belum juga diberikan. Apakah normal?",
-        "answer": "<div class='space-y-3'>\n<p>Hal ini cukup umum terjadi dan tidak perlu terlalu dicemaskan.</p>\n\n<div class='bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm'>\n⏳ Penilaian tidak selalu dilakukan oleh satu dosen saja, tetapi bisa melibatkan pengajar lain atau dosen yang menangani lebih dari satu kelas.\n</div>\n\n<p>Karena itu, keterlambatan dalam pemberian nilai adalah hal yang wajar, bahkan terkadang hingga masuk ke sesi berikutnya.</p>\n\n<p>Yang terpenting, tetap berikan jawaban terbaik pada setiap sesi yang dikerjakan.</p>\n</div>",
+        "answer": "<div class='space-y-3'>\n<p>Hal ini cukup umum terjadi dan tidak perlu terlalu dicemaskan.</p>\n\n<div class='bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm'>\n⏳ Penilaian tidak selalu dilakukan oleh dosen tetap UT saja, tetapi bisa melibatkan pengajar dari universitas lain atau dosen yang menangani lebih dari satu kelas.\n</div>\n\n<p>Karena itu, keterlambatan dalam pemberian nilai adalah hal yang wajar, bahkan terkadang hingga masuk ke sesi berikutnya.</p>\n\n<p>Yang terpenting, tetap berikan jawaban terbaik pada setiap sesi yang dikerjakan.</p>\n</div>",
         "images": []
     },
     {
