@@ -1,7 +1,7 @@
 [
     {
         "question": "Latihan soal tidak dapat ditampilkan pada e-learning, kenapa dan harus bagaimana?",
-        "answer": "Latihan soal yang tidak tampil atau muncul error pada suatu section di e-learning bisa disebabkan oleh beberapa hal. Salah satunya adalah materi pada section tersebut memang belum diunggah oleh dosen. Section tersebut tidak berpengaruh terhadap penilaian tutorial online, sehingga kamu bisa langsung melewatinya dengan memilih \"tandai selesai\".",
+        "answer": "<div class='space-y-3'>\n<p>Latihan soal yang tidak tampil atau muncul error pada suatu section di e-learning bisa disebabkan oleh beberapa hal.</p>\n\n<div class='bg-blue-50 border border-blue-200 rounded-xl p-3 text-sm'>\n💡 Salah satu penyebab paling umum adalah materi pada section tersebut memang belum diunggah oleh dosen.\n</div>\n\n<p>Jika section tersebut tidak mempengaruhi penilaian tutorial online, kamu bisa langsung melewatinya dengan memilih <b>\"tandai selesai\"</b>.</p>\n</div>",
         "images": [
             "images/image1.jpeg",
             "images/image2.jpeg"
@@ -9,7 +9,7 @@
     },
     {
         "question": "Jika sudah mengerjakan sesi 1 dari total 8 sesi, berapa persen progress yang seharusnya muncul?",
-        "answer": "Tidak perlu terlalu berfokus pada progress bar, karena persentasenya tidak selalu mencerminkan detail penilaian secara akurat. Sebaiknya cek langsung pada tab \"Grades\" untuk melihat rincian penilaian, dan pastikan setiap section yang wajib sudah dikerjakan dengan benar.",
+        "answer": "<div class='space-y-3'>\n<p>Tidak perlu terlalu berfokus pada progress bar, karena persentasenya tidak selalu mencerminkan detail penilaian secara akurat.</p>\n\n<div class='bg-yellow-50 border border-yellow-200 rounded-xl p-3 text-sm'>\n⚠️ Progress bar seringkali hanya indikator visual, bukan acuan utama nilai.\n</div>\n\n<p>Sebaiknya langsung cek pada tab <b>\"Grades\"</b> untuk melihat rincian penilaian, dan pastikan setiap section yang wajib sudah dikerjakan dengan benar.</p>\n</div>",
         "images": [
             "images/image3.jpeg",
             "images/image4.jpeg"
@@ -17,22 +17,31 @@
     },
     {
         "question": "Kenapa pada sebuah mata kuliah tidak terdapat section kehadiran dan diskusi?",
-        "answer": "Periksa kembali jenis mata kuliah tersebut. Jika termasuk mata kuliah berpraktik, biasanya memang tidak terdapat section kehadiran maupun diskusi. Sebagai gantinya, akan ada tugas yang diberikan pada sesi tertentu, seperti sesi 3, 5, dan 7 dalam tutorial online.",
-        "images": ["images/image5.jpeg"]
+        "answer": "<div class='space-y-3'>\n<p>Periksa kembali jenis mata kuliah tersebut.</p>\n\n<div class='bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm'>\n📌 Jika termasuk mata kuliah praktik, biasanya memang tidak terdapat section kehadiran maupun diskusi.\n</div>\n\n<p>Sebagai gantinya, akan ada tugas yang diberikan pada sesi tertentu, seperti <b>sesi 3, 5, dan 7</b> dalam tutorial online.</p>\n</div>",
+        "images": [
+            "images/image5.jpeg"
+        ]
     },
     {
         "question": "Nilai diskusi yang diberikan dosen masih kecil, apakah bisa diperbaiki?",
-        "answer": "Bisa. Kamu dapat menambahkan jawaban baru pada section diskusi tersebut sebagai bentuk revisi. Disarankan untuk menuliskan keterangan \"REVISI\" di bagian awal jawaban agar mudah dikenali. Biasanya dosen akan meninjau ulang dan mempertimbangkan nilai terbaik dari kontribusi yang telah diberikan.",
+        "answer": "<div class='space-y-3'>\n<p>Bisa. Kamu dapat menambahkan jawaban baru pada section diskusi tersebut sebagai bentuk revisi.</p>\n\n<div class='bg-green-50 border border-green-200 rounded-xl p-3 text-sm'>\n✏️ Tips: Tambahkan tulisan <b>\"REVISI\"</b> di bagian awal jawaban agar mudah dikenali.\n</div>\n\n<p>Biasanya dosen akan meninjau ulang dan mempertimbangkan nilai terbaik dari kontribusi yang telah diberikan.</p>\n</div>",
         "images": []
     },
     {
         "question": "Sudah beberapa hari setelah mengirim jawaban pada section diskusi, tapi nilainya belum juga diberikan. Apakah normal?",
-        "answer": "Hal ini cukup umum terjadi dan tidak perlu terlalu dicemaskan. Penilaian diskusi tidak selalu dilakukan oleh satu dosen tetap saja, tetapi bisa juga melibatkan pengajar lain dari institusi berbeda atau dosen yang menangani lebih dari satu kelas. Karena itu, keterlambatan dalam pemberian nilai adalah hal yang wajar, bahkan terkadang hingga masuk ke sesi berikutnya. Yang terpenting, tetap berikan jawaban terbaik pada setiap sesi yang dikerjakan.",
+        "answer": "<div class='space-y-3'>\n<p>Hal ini cukup umum terjadi dan tidak perlu terlalu dicemaskan.</p>\n\n<div class='bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm'>\n⏳ Penilaian tidak selalu dilakukan oleh satu dosen saja, tetapi bisa melibatkan pengajar lain atau dosen yang menangani lebih dari satu kelas.\n</div>\n\n<p>Karena itu, keterlambatan dalam pemberian nilai adalah hal yang wajar, bahkan terkadang hingga masuk ke sesi berikutnya.</p>\n\n<p>Yang terpenting, tetap berikan jawaban terbaik pada setiap sesi yang dikerjakan.</p>\n</div>",
         "images": []
     },
     {
         "question": "Sudah menyelesaikan sebuah sesi tutorial online, kenapa sesi selanjutnya belum terbuka?",
-        "answer": "Hal ini normal terjadi. Tutorial online (tuton) memiliki jadwal yang sudah ditentukan, biasanya sekitar satu sesi per minggu. Setiap sesi akan terbuka sesuai jadwalnya dan juga akan ditutup dalam periode tertentu. Jadi meskipun sesi sebelumnya sudah selesai, kamu tetap perlu menunggu hingga jadwal sesi berikutnya dibuka.",
-        "images": ["images/image6.jpeg"]
+        "answer": "<div class='space-y-3'>\n<p>Hal ini normal terjadi.</p>\n\n<div class='bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-sm'>\n📅 Tutorial online (tuton) memiliki jadwal yang sudah ditentukan, biasanya sekitar <b>1 sesi per minggu</b>.\n</div>\n\n<p>Setiap sesi akan terbuka sesuai jadwalnya dan juga akan ditutup dalam periode tertentu.</p>\n\n<p>Jadi meskipun sesi sebelumnya sudah selesai, kamu tetap perlu menunggu hingga jadwal sesi berikutnya dibuka.</p>\n</div>",
+        "images": [
+            "images/image6.jpeg"
+        ]
+    },
+    {
+        "question": "Apa yang harus dilakukan jika tutor tidak aktif (AFK) atau tidak memberikan nilai?",
+        "answer": "Jika tutor tidak aktif selama <span class='font-semibold'>3 sesi berturut-turut</span> atau nilai tidak kunjung diberikan dalam periode yang sama, kamu bisa melaporkannya ke pihak fakultas.<br><br><div class='bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm'><span class='font-semibold text-yellow-700'>Penting:</span> Pastikan kamu melaporkan ke fakultas <span class='font-semibold'>sesuai mata kuliah</span>, bukan berdasarkan program studi kamu.</div><br>Contoh: Jika kamu dari Ilmu Komunikasi tetapi mengalami kendala di mata kuliah Bahasa Indonesia, maka laporan harus ditujukan ke <span class='font-semibold'>FKIP</span>, bukan ke FHISIP.<br><br><div class='bg-gray-50 rounded-lg p-3 border border-gray-200'><div class='font-semibold mb-2'>Langkah pelaporan:</div><ol class='list-decimal ml-5 space-y-1 text-sm'><li>Masuk ke Microsoft Outlook menggunakan akun <span class='font-medium'>nim@ecampus.ut.ac.id</span></li><li>Buat email baru</li><li>Kirim ke salah satu email berikut:</li></ol><ul class='mt-2 ml-5 text-sm space-y-1 list-disc'><li>FST: <span class='text-blue-600'>fst@ecampus.ut.ac.id</span></li><li>FHISIP: <span class='text-blue-600'>fhisip@ecampus.ut.ac.id</span></li><li>FKIP: <span class='text-blue-600'>fkip@ecampus.ut.ac.id</span></li><li>FEB: <span class='text-blue-600'>feb@ecampus.ut.ac.id</span></li></ul><ol start='4' class='list-decimal ml-5 mt-2 space-y-1 text-sm'><li>Subjek: <span class='font-medium'>Pengaduan Tutor</span></li><li>Sertakan data lengkap (Nama, NIM, Prodi, Kode MK, Kelas, Keluhan)</li><li>Kirim email</li></ol></div><br><div class='bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm'>Tunggu proses tindak lanjut sekitar <span class='font-semibold'>3×24 jam</span>.</div>",
+        "images": []
     }
 ]
